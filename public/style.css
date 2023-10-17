@@ -53,8 +53,8 @@ section.hero {
 }
 
 .hero #figure {
-  width: 40%;
-  max-width: 400px;
+  width: 60%;
+  max-width: 200px;
   background-color: transparent;
   animation: animate 2s infinite alternate ease-in-out;
 }
@@ -86,19 +86,9 @@ section.hero {
 }
 
 .hero span {
-  color: var(--font);
-  font-weight: 600;
+  color: var(--action);
+  font-weight: 700;
   position: relative;
-}
-
-.hero span::before {
-  content: "";
-  height: 15px;
-  width: 70px;
-  position: absolute;
-  bottom: 5px;
-  z-index: -1;
-  background-color: var(--action);
 }
 
 /* HERO SECTION END */
@@ -199,7 +189,7 @@ section.hero {
   position: fixed;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-color: white;
+  background-color: rgb(222, 207, 207);
   color: var(--bg);
   z-index: 1;
   height: 60%;
@@ -276,5 +266,16 @@ footer {
   }
   #popup {
     max-width: 50%;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  form {
+    flex-direction: column;
   }
 }
