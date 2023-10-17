@@ -1,294 +1,280 @@
 /* GENERAL  */
 
 :root {
-    --font: white;
-    --bg: #242582;
-    --action: #F64C72;
-    --duo: #2F2FA2;
-    --grey: #99738E;
+  --font: white;
+  --bg: #242582;
+  --action: #f64c72;
+  --duo: #2f2fa2;
+  --grey: #99738e;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-    background-color: var(--bg);
+  background-color: var(--bg);
 }
 
 a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 /* HERO SECTION */
 
 section.hero {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0px 50px;
-    justify-content: center;
-    gap: 20px;
-    position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 50px;
+  overflow: hidden;
+  position: relative;
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    color: var(--font);
+  font-size: 3rem;
+  color: var(--font);
 }
 
 .hero h3 {
-    font-weight: 500;
-    font-size: 2rem;
-    color: white;
-    letter-spacing: 2px;
-    text-align: center;
-}
-
-.hero #top {
-    position: absolute;
-    bottom: 0;
-    z-index: -1;
-    width: 100%;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: white;
+  letter-spacing: 2px;
+  text-align: center;
 }
 
 .hero #figure {
-    width: 80%;
-    max-width: 400px;
-    background-color: transparent;
-    animation: animate 2s infinite alternate ease-in-out ;
+  width: 40%;
+  max-width: 400px;
+  background-color: transparent;
+  animation: animate 2s infinite alternate ease-in-out;
 }
 
 @keyframes animate {
-    
-    to {
-      transform: translateY(-40px);
-    }
+  to {
+    transform: translateY(-40px);
   }
+}
 
 .hero input {
-      padding: 10px 15px;
-      border-radius: 4px;
-      border: none;
-  }
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: none;
+}
 
-.hero button{
-    border: none;
-    border-radius: 4px;
-    padding: 10px 15px;
-    font-weight: 500;
-    color: var(--font);
-    background-color: var(--action);
+.hero button {
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-weight: 500;
+  color: var(--font);
+  background-color: var(--action);
 }
 
 .hero form {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .hero span {
-    color: var(--font);
-    font-weight: 600;
-    position: relative;
+  color: var(--font);
+  font-weight: 600;
+  position: relative;
 }
 
 .hero span::before {
-    content: "";
-    height: 15px;
-    width: 70px;
-    position: absolute;
-    bottom: 5px;
-    z-index: -1;
-    background-color: var(--action);
+  content: "";
+  height: 15px;
+  width: 70px;
+  position: absolute;
+  bottom: 5px;
+  z-index: -1;
+  background-color: var(--action);
 }
-
 
 /* HERO SECTION END */
 
 .booksContainer {
-    position: relative;
-    padding: 35px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 15px;
+  position: relative;
+  padding: 35px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
 }
 
 .booksContainer::after {
-    content: "";
-    height: 1%;
-    width: 50%;
-    background-color: var(--action);
-    position: absolute;
-    top: 0px;
-    left: 0px;
+  content: "";
+  height: 1%;
+  width: 50%;
+  background-color: var(--action);
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 .booksContainer h2 {
-    font-weight: 700;
-    font-size: 1.7rem;
-    color: white;
-    text-align: center;
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: white;
+  text-align: center;
 }
 
 .controls {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-    font-size: .75rem;
-    color: var(--font);
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: var(--font);
 }
 
-.controls button { 
-    border: none;
-    background: none;
-    border-radius: 4px;
-    padding: 5px 15px;
-    font-size: .75rem;
-    color: var(--font);
+.controls button {
+  border: none;
+  background: none;
+  border-radius: 4px;
+  padding: 5px 15px;
+  font-size: 0.75rem;
+  color: var(--font);
 }
-
 
 .books {
-    padding: 40px;
-    gap: 30px;
-    display: flex;
-    min-height: 400px;
-    width: 100%;
-    overflow-x: auto;
-    
+  gap: 30px;
+  display: flex;
+  min-height: 400px;
+  width: 100%;
+  padding: 10px;
+  overflow-x: auto;
 }
 
 .book {
-    min-height: 300px;
-    min-width: 300px;
-margin: 0 auto;
-    max-width: 300px;
-    max-height: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-    color: white;
-    text-align: center;
-    padding: 24px 12px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
-    gap: 14px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+  min-height: 300px;
+  min-width: 300px;
+  margin: 0 auto;
+  max-width: 300px;
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  color: white;
+  text-align: center;
+  padding: 24px 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  gap: 14px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .book:hover {
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .book h2 {
-    font-size: 1.1rem;
-    color: white;
-    font-weight: 500;
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 500;
 }
 
 .book img {
-    max-width: 70%;
-    
-    border-radius: 10px;
+  max-width: 70%;
+
+  border-radius: 10px;
 }
 
 #popup {
-    left: -100%;
-    position: fixed;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    color: var(--bg);
-    z-index: 1;
-    height: 60%;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: .3s all ease;
-    gap: 20px;
-    padding: 24px;
-    text-align: center;
-    overflow-y: scroll;
-    border-radius: 20px;
+  left: -100%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  color: var(--bg);
+  z-index: 1;
+  height: 60%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s all ease;
+  gap: 20px;
+  padding: 24px;
+  text-align: center;
+  overflow-y: scroll;
+  border-radius: 20px;
 }
-
-
 
 #popup h2 {
-    color: black;
+  color: black;
 }
 #popup p {
-    color: black;
+  color: black;
 }
 
 #popup button {
-    border: none;
-    border-radius: 4px;
-    padding: 10px 15px;
-    font-weight: 500;
-    color: var(--font);
-    background-color: var(--action);
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-weight: 500;
+  color: var(--font);
+  background-color: var(--action);
 }
 
 #popup.active {
-    left: 50%;
-    
+  left: 50%;
 }
 
 #overlay {
-    transition: .3s all ease;
-    position: fixed;
-    top: 0%;
-    bottom: 0%;
-    opacity: 0;
-    left: 0%;
-    scale: 0;
-    right: 100%;
-    background-color: rgba(0, 0, 0, .5);
+  transition: 0.3s all ease;
+  position: fixed;
+  top: 0%;
+  bottom: 0%;
+  opacity: 0;
+  left: 0%;
+  scale: 0;
+  right: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 #overlay.active {
-    scale: 1;
-    right: 0;
-    opacity: 1;
+  scale: 1;
+  right: 0;
+  opacity: 1;
 }
 
 /* FOOTER */
 
 footer {
-    min-height: 5vh;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content:  center;
-    background-color: var(--duo);
-
-
+  min-height: 5vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--duo);
 }
 @media (min-width: 799px) {
-    body {
-    }
-    .books {
-        overflow: hidden;
-        flex-wrap: wrap;
-    }
-    .booksContainer::after {
-        height: 20px;
-        width: 33%;
-    }
-    #popup {
-        max-width: 50%;
-    }
+  body {
+  }
+  .books {
+    overflow: hidden;
+    flex-wrap: wrap;
+  }
+  .booksContainer::after {
+    height: 20px;
+    width: 33%;
+  }
+  #popup {
+    max-width: 50%;
+  }
 }
