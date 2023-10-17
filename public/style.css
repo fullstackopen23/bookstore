@@ -1,163 +1,294 @@
+/* GENERAL  */
+
 :root {
-    --bg: #001220;
-    --bes: #c1121f;
-    --duo: #669bbc;
-    --blob: #FBAE3C;
+    --font: white;
+    --bg: #242582;
+    --action: #F64C72;
+    --duo: #2F2FA2;
+    --grey: #99738E;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
     background-color: var(--bg);
-
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
 
-.hero {
+/* HERO SECTION */
+
+section.hero {
     height: 100vh;
-    z-index: 1;
-    position: relative;
-    background-color: var(--bg);
-    color: var(--blob);
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0px 50px;
     justify-content: center;
-    overflow: hidden;
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    gap: 40px;
-    padding: 40px;
+    gap: 20px;
+    position: relative;
 }
-
-
-
-.hero #blob {
-    position: absolute;
-    top: 0;
-    right: 0;
-    scale: 1;
-    z-index: -1;
-}
-
-#blob2 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    scale: 1;
-    z-index: 1;
-}
-
 
 .hero h1 {
-    color: var(--duo);
-    font-size: 3.5rem
+    font-size: 3.5rem;
+    color: var(--font);
 }
-.hero h2 {
-    font-weight: 300;
+
+.hero h3 {
+    font-weight: 500;
+    font-size: 2rem;
+    color: white;
+    letter-spacing: 2px;
+    text-align: center;
 }
+
+.hero #top {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+}
+
+.hero #figure {
+    width: 80%;
+    max-width: 400px;
+    background-color: transparent;
+    animation: animate 2s infinite alternate ease-in-out ;
+}
+
+@keyframes animate {
+    
+    to {
+      transform: translateY(-40px);
+    }
+  }
 
 .hero input {
-    padding: 12px 34px;
+      padding: 10px 15px;
+      border-radius: 4px;
+      border: none;
+  }
+
+.hero button{
     border: none;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-family: "Poppins";
-
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-weight: 500;
+    color: var(--font);
+    background-color: var(--action);
 }
 
-.hero button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-.hero #searchBtn {
-    width: 25px;
-    color: white;
-    transition: all 1s ease;
-
-}
-
-form {
+.hero form {
     display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.books {
-    min-height: 100vh;
-    position: relative;
-    display: flex;
-    padding: 40px 60px;
-    flex-wrap: wrap;
     gap: 20px;
-    z-index: 2;
 }
+
+.hero span {
+    color: var(--font);
+    font-weight: 600;
+    position: relative;
+}
+
+.hero span::before {
+    content: "";
+    height: 15px;
+    width: 70px;
+    position: absolute;
+    bottom: 5px;
+    z-index: -1;
+    background-color: var(--action);
+}
+
+
+/* HERO SECTION END */
 
 .booksContainer {
+    position: relative;
+    padding: 35px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    gap: 15px;
 }
 
-.book img {
+.booksContainer::after {
+    content: "";
+    height: 1%;
+    width: 50%;
+    background-color: var(--action);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.booksContainer h2 {
+    font-weight: 700;
+    font-size: 1.7rem;
+    color: white;
+    text-align: center;
+}
+
+.controls {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    font-size: .75rem;
+    color: var(--font);
+}
+
+.controls button { 
+    border: none;
+    background: none;
+    border-radius: 4px;
+    padding: 5px 15px;
+    font-size: .75rem;
+    color: var(--font);
+}
+
+
+.books {
+    padding: 40px;
+    gap: 30px;
+    display: flex;
+    min-height: 400px;
     width: 100%;
-    max-height: 300px;
+    overflow-x: auto;
+    
 }
 
 .book {
-    margin: 0 auto;
-    padding: 30px;
-    color: white;
-    font-family: "Poppins";
+    min-height: 300px;
+    min-width: 300px;
+margin: 0 auto;
+    max-width: 300px;
+    max-height: 500px;
     display: flex;
-    z-index: 2;
-    gap: 10px;
-    width: 300px;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    color: white;
+    text-align: center;
+    padding: 24px 12px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 16px;
+    gap: 14px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.book:hover {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
 .book h2 {
-    font-size: 1.2rem;
-    font-weight: 400;
-
-}
-.book h3 {
-    font-size: 1rem;
-    font-weight: 300;
-
+    font-size: 1.1rem;
+    color: white;
+    font-weight: 500;
 }
 
-section {
-    min-height: 100vh;
-    background-color: var(--bg);
-    display: flex;
+.book img {
+    max-width: 70%;
+    
+    border-radius: 10px;
+}
+
+#popup {
+    left: -100%;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: var(--bg);
     z-index: 1;
-    position: relative;
+    height: 60%;
+    width: 80%;
+    display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.filterContainer {
-    display: flex;
-    color: white;
-    align-items: center;
+    transition: .3s all ease;
     gap: 20px;
-}
-.filterContainer button {
-    color: white;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
+    padding: 24px;
+    text-align: center;
+    overflow-y: scroll;
+    border-radius: 20px;
 }
 
+
+
+#popup h2 {
+    color: black;
+}
+#popup p {
+    color: black;
+}
+
+#popup button {
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-weight: 500;
+    color: var(--font);
+    background-color: var(--action);
+}
+
+#popup.active {
+    left: 50%;
+    
+}
+
+#overlay {
+    transition: .3s all ease;
+    position: fixed;
+    top: 0%;
+    bottom: 0%;
+    opacity: 0;
+    left: 0%;
+    scale: 0;
+    right: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+#overlay.active {
+    scale: 1;
+    right: 0;
+    opacity: 1;
+}
+
+/* FOOTER */
+
+footer {
+    min-height: 5vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content:  center;
+    background-color: var(--duo);
+
+
+}
+@media (min-width: 799px) {
+    body {
+    }
+    .books {
+        overflow: hidden;
+        flex-wrap: wrap;
+    }
+    .booksContainer::after {
+        height: 20px;
+        width: 33%;
+    }
+    #popup {
+        max-width: 50%;
+    }
+}
