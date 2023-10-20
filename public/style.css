@@ -12,7 +12,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+<<<<<<< HEAD
   font-family: 'Poppins', sans-serif;
+=======
+  font-family: "Poppins", sans-serif;
+>>>>>>> a2d08298a9f98282af4d9d1853d18de3584c81f1
 }
 
 body {
@@ -32,19 +36,31 @@ section.hero {
   display: flex;
   flex-direction: column;
   align-items: center;
+<<<<<<< HEAD
   padding: 0px 50px;
   justify-content: center;
   gap: 20px;
+=======
+  justify-content: center;
+  gap: 10px;
+  padding: 50px;
+  overflow: hidden;
+>>>>>>> a2d08298a9f98282af4d9d1853d18de3584c81f1
   position: relative;
 }
 
 .hero h1 {
+<<<<<<< HEAD
   font-size: 3.5rem;
+=======
+  font-size: 3rem;
+>>>>>>> a2d08298a9f98282af4d9d1853d18de3584c81f1
   color: var(--font);
 }
 
 .hero h3 {
   font-weight: 500;
+<<<<<<< HEAD
   font-size: 2rem;
   color: white;
   letter-spacing: 2px;
@@ -61,6 +77,17 @@ section.hero {
 .hero #figure {
   width: 80%;
   max-width: 400px;
+=======
+  font-size: 1.5rem;
+  color: white;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.hero #figure {
+  width: 60%;
+  max-width: 200px;
+>>>>>>> a2d08298a9f98282af4d9d1853d18de3584c81f1
   background-color: transparent;
   animation: animate 2s infinite alternate ease-in-out;
 }
@@ -92,6 +119,7 @@ section.hero {
 }
 
 .hero span {
+<<<<<<< HEAD
   color: var(--font);
   font-weight: 600;
   position: relative;
@@ -107,6 +135,13 @@ section.hero {
   background-color: var(--action);
 }
 
+=======
+  color: var(--action);
+  font-weight: 700;
+  position: relative;
+}
+
+>>>>>>> a2d08298a9f98282af4d9d1853d18de3584c81f1
 /* HERO SECTION END */
 
 .booksContainer {
@@ -120,7 +155,11 @@ section.hero {
 }
 
 .booksContainer::after {
+<<<<<<< HEAD
   content: '';
+=======
+  content: "";
+>>>>>>> a2d08298a9f98282af4d9d1853d18de3584c81f1
   height: 1%;
   width: 50%;
   background-color: var(--action);
@@ -155,11 +194,18 @@ section.hero {
 }
 
 .books {
+<<<<<<< HEAD
   padding: 40px;
+=======
+>>>>>>> a2d08298a9f98282af4d9d1853d18de3584c81f1
   gap: 30px;
   display: flex;
   min-height: 400px;
   width: 100%;
+<<<<<<< HEAD
+=======
+  padding: 10px;
+>>>>>>> a2d08298a9f98282af4d9d1853d18de3584c81f1
   overflow-x: auto;
 }
 
@@ -205,7 +251,11 @@ section.hero {
   position: fixed;
   top: 50%;
   transform: translate(-50%, -50%);
+<<<<<<< HEAD
   background-color: white;
+=======
+  background-color: rgb(222, 207, 207);
+>>>>>>> a2d08298a9f98282af4d9d1853d18de3584c81f1
   color: var(--bg);
   z-index: 1;
   height: 60%;
@@ -270,6 +320,11 @@ footer {
   background-color: var(--duo);
 }
 @media (min-width: 799px) {
+<<<<<<< HEAD
+=======
+  body {
+  }
+>>>>>>> a2d08298a9f98282af4d9d1853d18de3584c81f1
   .books {
     overflow: hidden;
     flex-wrap: wrap;
@@ -282,3 +337,17 @@ footer {
     max-width: 50%;
   }
 }
+<<<<<<< HEAD
+=======
+
+@media (max-width: 400px) {
+  body {
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  form {
+    flex-direction: column;
+  }
+}
+>>>>>>> a2d08298a9f98282af4d9d1853d18de3584c81f1

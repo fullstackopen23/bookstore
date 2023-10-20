@@ -1,43 +1,43 @@
-import Bookcontainer from './components/Bookcontainer'
-import { useState } from 'react'
-import Footer from './components/Footer'
+import Bookcontainer from "./components/Bookcontainer";
+import { useState } from "react";
+import Footer from "./components/Footer";
 
 function App() {
   const [queryInput, setQueryInput] = useState({
     query: null,
     update: false,
-  })
+  });
 
   const handleSearchClick = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     setQueryInput({
       query: e.target.searchInput.value,
       update: !queryInput.update,
-    })
-  }
+    });
+  };
 
   const sportQuery = {
-    query: 'sport',
-    heading: 'Sports',
-  }
+    query: "sport",
+    heading: "Sports",
+  };
   const artQuery = {
-    query: 'art',
-    heading: 'Arts',
-  }
+    query: "art",
+    heading: "Arts",
+  };
 
   return (
     <>
       <section className="hero">
         <h1>Bookhunt.io</h1>
         <h3>
-          Discover your next favorite <span>book</span>
+          Discover your next <span>favorite</span> book
         </h3>
 
         <img src="result.png" id="figure" alt="person reading book" />
         <form
           action="#"
           onSubmit={(e) => {
-            handleSearchClick(e)
+            handleSearchClick(e);
           }}
         >
           <input
@@ -57,7 +57,7 @@ function App() {
 
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
