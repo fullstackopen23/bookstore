@@ -12,11 +12,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-<<<<<<< HEAD
   font-family: 'Poppins', sans-serif;
-=======
-  font-family: "Poppins", sans-serif;
->>>>>>> a2d08298a9f98282af4d9d1853d18de3584c81f1
 }
 
 body {
@@ -155,11 +151,7 @@ section.hero {
 }
 
 .booksContainer::after {
-<<<<<<< HEAD
   content: '';
-=======
-  content: "";
->>>>>>> a2d08298a9f98282af4d9d1853d18de3584c81f1
   height: 1%;
   width: 50%;
   background-color: var(--action);
