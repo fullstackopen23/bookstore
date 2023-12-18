@@ -1,43 +1,56 @@
-import Bookcontainer from "./components/Bookcontainer";
-import { useState } from "react";
-import Footer from "./components/Footer";
+import Bookcontainer from './components/Bookcontainer'
+import { useState } from 'react'
+import Footer from './components/Footer'
 
 function App() {
   const [queryInput, setQueryInput] = useState({
     query: null,
     update: false,
-  });
+  })
 
   const handleSearchClick = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     setQueryInput({
       query: e.target.searchInput.value,
       update: !queryInput.update,
-    });
-  };
+    })
+    const booksContainer = document.querySelector('.booksContainer')
+    booksContainer.scrollIntoView({ behavior: 'smooth' })
+  }
 
   const sportQuery = {
-    query: "sport",
-    heading: "Sports",
-  };
+    query: 'sport',
+    heading: 'Sports',
+  }
   const artQuery = {
-    query: "art",
-    heading: "Arts",
-  };
+    query: 'art',
+    heading: 'Arts',
+  }
 
   return (
     <>
       <section className="hero">
-        <h1>Bookhunt.io</h1>
-        <h3>
-          Discover your next <span>favorite</span> book
-        </h3>
+        <div className="video-container">
+          <video
+            className="back-video"
+            autoPlay
+            loop
+            muted
+            playsInline
+            src="video.mp4"
+          ></video>
+        </div>
 
-        <img src="result.png" id="figure" alt="person reading book" />
+        <h1>
+          <span>Bookhunt.io</span>
+        </h1>
+
+        <h3>Discover your next favorite book</h3>
+
         <form
           action="#"
           onSubmit={(e) => {
-            handleSearchClick(e);
+            handleSearchClick(e)
           }}
         >
           <input
@@ -57,7 +70,7 @@ function App() {
 
       <Footer />
     </>
-  );
+  )
 }
 
-export default App;
+export default App

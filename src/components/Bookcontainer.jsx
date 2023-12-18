@@ -59,12 +59,21 @@ function Bookcontainer({ queryInput }) {
     console.log(popup)
   }
 
+  const reduceTitleLength = (title) => {
+    const maxLength = 45
+    if (title.length >= maxLength) {
+      return title.substring(0, 45) + '... '
+    } else return title
+  }
+
   return (
     <div>
       {books.length > 0 ? (
         <div className="booksContainer">
           {queryInput.heading ? (
-            <h2>Trending Books in {queryInput.heading}</h2>
+            <h2>
+              Trending Books in <span>{queryInput.heading}</span>
+            </h2>
           ) : queryInput.query ? (
             <h2 className="results">
               Results for "{queryInput.query}"
@@ -95,19 +104,23 @@ function Bookcontainer({ queryInput }) {
                   openPopup(book.id)
                 }}
               >
-                <h2 className="title">{book.volumeInfo.title}</h2>
+                <h2 className="title">
+                  {reduceTitleLength(book.volumeInfo.title)}
+                </h2>
                 {book.volumeInfo.authors ? (
                   <p>{book.volumeInfo.authors[0]}</p>
                 ) : (
                   <p>No author found</p>
                 )}
-                {book.volumeInfo.imageLinks ? (
-                  <img
-                    src={book.volumeInfo.imageLinks.thumbnail}
-                  ></img>
-                ) : (
-                  <img src="no_img.png"></img>
-                )}
+                <div className="img-container">
+                  {book.volumeInfo.imageLinks ? (
+                    <img
+                      src={book.volumeInfo.imageLinks.thumbnail}
+                    ></img>
+                  ) : (
+                    <img src="noImg.jpg"></img>
+                  )}
+                </div>
 
                 <div id="popup" data-id={book.id}>
                   <h2>{book.volumeInfo.title}</h2>
@@ -117,13 +130,13 @@ function Bookcontainer({ queryInput }) {
                       src={book.volumeInfo.imageLinks.thumbnail}
                     ></img>
                   ) : (
-                    <img src="no_img.png"></img>
+                    <img src="noImg.jpg"></img>
                   )}
 
                   <p>{book.volumeInfo.description}</p>
                   <button>
                     {book.saleInfo.saleability === 'NOT_FOR_SALE' ? (
-                      <a href="#">Not for sale</a>
+                      <a>Not for sale</a>
                     ) : (
                       <a href={book.saleInfo.buyLink}> BUY</a>
                     )}
